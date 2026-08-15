@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: team-hub
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: ./app
+    pullRequestPreviewsEnabled: true

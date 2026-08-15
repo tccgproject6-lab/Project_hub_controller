@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Team Hub — Smart Control Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span>TH</span><b>Team Hub</b></div>
+  <div class="title"><div class="eyebrow">INTELLIGENT CONTROL CENTER</div><h1>Command Dashboard</h1></div>
+  <div class="actions"><button id="lang">EN</button><button id="theme">☾</button><button id="notify">🔔 <i id="notifyCount">3</i></button></div>
+</header>
+
+<main>
+<section class="welcome">
+  <div><div class="eyebrow">GOOD MORNING, ADMIN</div><h2>Everything your team needs, in one view.</h2><p>Monitor projects, people, quality, meetings and releases before small issues become blockers.</p></div>
+  <div class="health glass"><span>Overall workspace health</span><b id="health">Healthy</b><small id="healthHint">Most workstreams are on track.</small></div>
+</section>
+
+<section class="kpis">
+<article class="glass"><span>Active projects</span><b>04</b><small>+1 this week</small></article>
+<article class="glass"><span>Open tasks</span><b>27</b><small class="warn">6 due soon</small></article>
+<article class="glass"><span>Team members</span><b>12</b><small>9 active today</small></article>
+<article class="glass"><span>Release readiness</span><b id="releaseScore">86%</b><small>1 blocker</small></article>
+</section>
+
+<section class="grid">
+<article class="glass panel">
+<div class="head"><div><div class="eyebrow">PROJECT PULSE</div><h3>Active projects</h3></div><button class="link">View all</button></div>
+<div id="projects"></div>
+</article>
+
+<article class="glass panel">
+<div class="head"><div><div class="eyebrow">SMART ASSISTANT</div><h3>Needs attention</h3></div><span class="ai">AI</span></div>
+<div id="insights"></div>
+</article>
+</section>
+
+<section class="grid lower">
+<article class="glass panel">
+<div class="head"><div><div class="eyebrow">TEAM ACTIVITY</div><h3>Recent activity</h3></div></div>
+<div id="activity"></div>
+</article>
+<article class="glass panel">
+<div class="head"><div><div class="eyebrow">RELEASE GATE</div><h3>Production readiness</h3></div><span id="releaseBadge" class="badge warn">1 blocker</span></div>
+<div class="gate"><span>✓</span><div><b>QA regression</b><small>All critical tests passed</small></div></div>
+<div class="gate"><span>✓</span><div><b>Security review</b><small>RLS and authentication verified</small></div></div>
+<div class="gate blocked"><span>!</span><div><b>High-priority bug</b><small>Resolve before production approval</small></div></div>
+<button id="openQA" class="wide">Open QA Center</button>
+</article>
+</section>
+
+<section class="glass panel timeline">
+<div class="head"><div><div class="eyebrow">WORKFLOW</div><h3>Website delivery pipeline</h3></div><b>72%</b></div>
+<div class="pipeline">
+<div class="stage done"><span>✓</span><b>Requirements</b></div><div class="line done"></div>
+<div class="stage done"><span>✓</span><b>Design</b></div><div class="line done"></div>
+<div class="stage active"><span>3</span><b>Development</b></div><div class="line"></div>
+<div class="stage"><span>4</span><b>Testing</b></div><div class="line"></div>
+<div class="stage"><span>5</span><b>Launch</b></div>
+</div>
+</section>
+</main>
+
+<div id="notifyPanel" class="notify-panel glass hidden">
+<div class="head"><b>Notifications</b><button id="closeNotify">×</button></div>
+<div class="n"><b>Release blocker detected</b><small>Hassaco Website · 8 min ago</small></div>
+<div class="n"><b>Asha completed UI review</b><small>TCC Project Hub · 24 min ago</small></div>
+<div class="n"><b>Meeting starts in 30 minutes</b><small>Development Team · Today</small></div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
