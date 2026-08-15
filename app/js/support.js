@@ -1,0 +1,1 @@
+window.TEAM_HUB_SUPPORT={headAdminWhatsapp:"https://wa.me/255710082844",aiEndpoint:"/api/ai-assistant"};
