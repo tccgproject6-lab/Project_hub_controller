@@ -1,0 +1,2 @@
+const MEETING_DEMO=window.HUB_CONFIG.supabaseUrl==="YOUR_SUPABASE_URL";
+const supabaseClient=MEETING_DEMO?null:window.supabase.createClient(window.HUB_CONFIG.supabaseUrl,window.HUB_CONFIG.supabaseAnonKey);
