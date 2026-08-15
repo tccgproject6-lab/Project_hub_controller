@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Team Hub — Version Control</title><link rel="stylesheet" href="css/git-studio.css"></head><body>
+<header><div class="brand"><span>TH</span><b>Version Control</b></div><div class="branch"><b>Hassaco Website</b><small>branch: main</small></div><div><button id="commit">Commit changes</button><button id="push">Push</button></div></header>
+<main><aside><div class="label">BRANCHES</div><button class="branchBtn active">main <small>production</small></button><button class="branchBtn">development <small>team work</small></button><button class="branchBtn">feature/auth <small>feature</small></button><button id="newBranch" class="outline">+ New branch</button><div class="label history">HISTORY</div><div id="history"></div></aside>
+<section class="content"><div class="toolbar"><b>Changes</b><span id="state">Working tree clean</span></div><div id="files"></div><div class="diff"><div class="diffHead"><b>Latest commit</b><span>main</span></div><pre id="diffText">No changes selected.</pre></div></section></main>
+<div id="toast" class="toast hidden"></div>
+<script src="js/git-studio.js"></script></body></html>

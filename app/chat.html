@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Team Hub Chat</title><link rel="stylesheet" href="css/chat.css"></head><body>
+<div class="chat-app"><aside class="sidebar"><div class="brand"><span>TH</span><b>Team Hub</b></div><input id="search" placeholder="Search chats"><div id="rooms"></div></aside>
+<section class="chat"><header class="chat-head"><div><b id="roomTitle">General</b><small id="presence">Connecting…</small></div><button id="call">🎥 Call</button></header><div id="typing" class="typing"></div><div id="messages" class="messages"></div><form id="composer"><button type="button" id="attach">＋</button><input id="message" autocomplete="off" placeholder="Type a message…"><button class="send">➤</button></form></section></div>
+<input id="file" type="file" hidden><div id="toast" class="toast hidden"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="js/config.js"></script><script src="js/realtime.js"></script><script src="js/chat.js"></script></body></html>

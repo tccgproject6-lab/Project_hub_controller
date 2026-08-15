@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Team Hub — Unified Workspace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><span>TH</span><b>Team Hub</b></div>
+  <button class="nav active" data-page="dashboard">⌂ <span>Dashboard</span></button>
+  <button class="nav" data-page="projects">▣ <span>Projects</span></button>
+  <button class="nav" data-page="tasks">✓ <span>Tasks</span></button>
+  <button class="nav" data-page="team">◉ <span>Team & Admin</span></button>
+  <button class="nav" data-page="chat">☵ <span>Chat</span></button>
+  <button class="nav" data-page="meetings">◌ <span>Meetings</span></button>
+  <button class="nav" data-page="code">⌘ <span>Code Studio</span></button>
+  <button class="nav" data-page="qa">◈ <span>Testing & QA</span></button>
+  <button class="nav" data-page="deploy">🚀 <span>Deployment</span></button>
+  <div class="bottom">
+    <button class="nav" id="language">🌐 <span>English</span></button>
+    <button class="nav" id="theme">☾ <span>Dark mode</span></button>
+    <button class="nav" id="help">? <span>How to use</span></button>
+  </div>
+</aside>
+
+<main>
+<header class="topbar">
+  <div><div class="eyebrow">UNIFIED DEVELOPMENT WORKSPACE</div><h1 id="pageTitle">Command Dashboard</h1></div>
+  <div class="top-actions"><span class="status" id="connection">● Checking connection…</span><button id="notifications">🔔 <i>3</i></button><div class="profile"><span>AM</span><b id="roleLabel">Super Admin</b></div></div>
+</header>
+
+<section id="page"></section>
+</main>
+</div>
+
+<div id="modal" class="modal hidden"><div class="modal-card">
+<button id="closeModal" class="close">×</button><div class="eyebrow">HOW TO USE</div>
+<h2>Team Hub guide</h2>
+<div class="guide"><p><b>1. Dashboard</b> — Monitor project health, tasks, QA and releases.</p><p><b>2. Projects</b> — Create a website project and move it through the delivery workflow.</p><p><b>3. Team & Admin</b> — Assign one member as Admin and control permissions.</p><p><b>4. Chat & Meetings</b> — Communicate and collaborate in real time.</p><p><b>5. Code Studio</b> — Edit and safely preview HTML/CSS/JS.</p><p><b>6. QA & Deployment</b> — Test, approve and prepare production releases.</p></div>
+</div></div>
+<div id="toast" class="toast hidden"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="js/config.js"></script><script src="js/supabase-client.js"></script>
+<script src="js/app.js"></script>
+</body></html>

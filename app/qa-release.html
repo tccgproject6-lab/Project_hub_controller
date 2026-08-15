@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Team Hub — QA & CI/CD</title><link rel="stylesheet" href="css/qa.css"></head><body>
+<header><div class="brand"><span>TH</span><b>QA & Release Center</b></div><div class="env"><b>STAGING</b><small>release/v1.8.0</small></div><button id="deploy">Approve Production</button></header>
+<main><section class="hero"><div><div class="eyebrow">QUALITY GATE</div><h1>Release readiness</h1><p>Every release passes automated checks before production approval.</p></div><div class="score"><b>94%</b><small>Ready for approval</small></div></section>
+<section class="grid"><article class="panel"><div class="head"><h3>Automated checks</h3><span class="pass">12 passed</span></div><div id="checks"></div></article><article class="panel"><div class="head"><h3>Pipeline</h3><span>CI/CD</span></div><div id="pipeline"></div></article></section>
+<section class="panel"><div class="head"><h3>Release history</h3><button id="rollback">Rollback</button></div><div id="releases"></div></section></main>
+<div id="toast" class="toast hidden"></div><script src="js/qa.js"></script></body></html>
