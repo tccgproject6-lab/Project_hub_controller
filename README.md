@@ -1,39 +1,34 @@
-# TEAM HUB — FINAL ONE PACKAGE
+# TEAM HUB — FINAL ONE PACKAGE (FIXED)
 
-Version: 1.0.0-rc1
-Status: Final integrated production candidate
+This package preserves the complete original final package and fixes compatibility/runtime issues without removing modules.
 
-## This is the single package to upload to GitHub.
+## Important
+The current Supabase project already has the Foundation Database and the first Super Admin.
+Do NOT rerun the old foundation/schema SQL blindly.
 
-Included modules:
-- Dashboard / smart control center
-- Super Admin / Admin / Member roles
-- Admin delegation
-- User management
-- Forgot-password approval queue
-- Forced password change + password history architecture
-- Projects and tasks
-- Realtime chat
-- Live meetings / WebRTC foundation
-- Code Studio / sandboxed preview
-- Git / version control foundation
-- QA / release gates
-- CI/CD architecture
-- WhatsApp Head Admin support
-- AI Assistant server boundary
-- English / Swahili + Light/Dark foundations
-- Security / RLS audit material
-- Production deployment documentation
+Run only:
+`supabase/999_FINAL_INCREMENTAL_MIGRATION.sql`
 
-## Before deployment
+Then configure the server-side functions/secrets documented under `server/`.
 
-1. Configure `app/js/config.js` with the Supabase URL and public anon/publishable key.
-2. Apply the SQL files under `supabase/` in dependency order.
-3. Configure the server-side secrets described under `server/`.
-4. Create the first Super Admin securely.
-5. Test Super Admin, Admin and Member accounts separately.
-6. Deploy through GitHub + Render only after the Go-Live checklist passes.
+## Frontend configuration
+`app/js/config.js` and `js/config.js` point to the current Supabase project and use the public publishable key.
 
-## Security rule
+Never place service-role/secret keys in frontend code.
 
-Never put Supabase service-role keys, AI provider secrets, Git tokens, deployment credentials, database passwords or long-lived TURN credentials in frontend files.
+## Main fixed items
+- Unified frontend Supabase client and TeamHubDB compatibility layer.
+- Login now uses the actual `workspace_members` role model.
+- Super Admin is read from `workspace_members`.
+- Forced password-change guard added.
+- Forgot-password request page added.
+- WebRTC syntax/runtime issue fixed.
+- Git Studio syntax issue fixed.
+- Duplicate configuration files are synchronized.
+- Realtime/chat/meeting schemas are aligned with the frontend.
+- Original folders and phase packages are preserved.
+- Production deployment/security documentation preserved.
+
+## Deployment
+GitHub repository -> Render static frontend -> Supabase backend.
+Privileged Auth, AI, Git OAuth, TURN/SFU, deployment and code execution require server-side infrastructure.
